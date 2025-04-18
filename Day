@@ -1,0 +1,8 @@
+import java.time.*;
+class TodayDay{
+    public static void main(String[] args){
+            LocalDate td=LocalDate.now();
+            DayOfWeek dow=td.getDayOfWeek();
+            System.out.println("Today is "+dow);
+    }
+}
