@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class SumOfArray {
+		public static void main(String args[]) {
+			Scanner s=new Scanner(System.in);
+			int n=5;
+			System.out.print("Enter numbers: ");
+			int sum=0;
+			int arr[]=new int[5];
+			for(int i=0;i<n;i++) {
+				arr[i]=s.nextInt();
+				sum+=arr[i];
+			}
+			System.out.println("Sum of elements :"+sum);
+		}
+}
+
