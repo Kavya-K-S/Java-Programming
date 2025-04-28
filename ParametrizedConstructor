@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Box{
+	int l, b, h;
+	Box(int l, int b, int h){
+		this.l=l;
+		this.b=b;
+		this.h=h; 
+	}
+	void volume(){
+		System.out.println("Volumn:"+l*b*h);
+	}
+}
+public class BoxesMain
+{
+	public static void main(String[] args) {
+		int l,b,h;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter length,breadth and height :");
+		l = s.nextInt();
+		b=s.nextInt();
+		h=s.nextInt();
+		Box b1 = new Box(l,b,h);
+		b1.volume();
+		System.out.println("Enter length,breadth and height :");
+		l = s.nextInt();
+		b=s.nextInt();
+		h=s.nextInt();
+		Box b2= new Box(l,b,h);
+		b2.volume();
+	}
+}
