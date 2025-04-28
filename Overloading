@@ -1,0 +1,24 @@
+class BankAccount{
+            //Savings
+	double calculateInterest(double p,int r){
+		return (p*r)/100;
+	}
+	//fixed deposit
+	double calculateInterest(double p,double r, int t){
+		return (p*r*t)/100;
+	}
+	//current account
+	double calculateInterest(){
+		return 0;
+	}
+}
+public class Account{
+	public static void main(String args[]){
+		BankAccount b=new BankAccount();
+		System.out.println("Interest for savings account= "+b.calculateInterest(5000,6));
+		System.out.println("Interest for fixed deposit = " + b.calculateInterest(6500,4.5,2));
+		System.out.println("Interest for current account= "+ b.calculateInterest());
+		
+	}
+}
+
