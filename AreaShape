@@ -1,0 +1,39 @@
+class Shape{
+	private String color;
+	Shape(String colour){
+		this.colour=colour;
+	}
+	public String GetColor(){
+		return this.colour;
+	}
+}
+class Circle extends Shape{
+	private double r;
+	Circle(String color,double r){
+		super(color);
+		this.r=r;
+	}
+	public double calcArea(){
+		return(3.14*r*r);
+	}
+}
+class Rectangle extends Shape{
+	private double l;
+	private double w;
+	Rectangle(String color,double l,double w){
+		super(color);
+		this.l=l;
+		this.w=w;
+	}
+	public double calcArea(){
+		return(l*w);
+	}
+}
+public class Shapes{
+	public static void main(String args[]){
+		Circle c=new Circle("Red",4);
+		Rectangle rec=new Rectangle("Green",5,6);
+		System.out.println("Circle\nArea= "+c.calcArea()+" Color= "+c.GetColor());
+		System.out.println("Rectangle\nArea= "+rec.calcArea()+" Color= "+rec.GetColor());
+	}
+}
