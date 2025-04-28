@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class invalidexp{
+	public static void main(String arg[]){
+		String a;
+		System.out.println("Enter a string :");
+		Scanner s=new Scanner(System.in);
+		try{
+			a=s.nextLine();
+			int n=Integer.parseInt(a);
+			System.out.println(n); 
+		}
+		catch(NumberFormatException e){
+			System.out.println(e);
+		}
+	}
+}
