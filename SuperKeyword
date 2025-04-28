@@ -1,0 +1,35 @@
+class Employee{
+	String name, role;
+	int salary;
+	Employee(String name, String role, int salary){
+
+		this.name = name;
+		this.role = role;
+		this.salary = salary;
+	}
+	void displayDetails(){
+		System.out.println("Name: "+name+" role: "+role+" Salary: "+salary); 
+	}
+
+}
+class Manager extends Employee{
+	String dept;
+	Manager(String name, String role, int salary, String dept){
+		super(name, role, salary);
+		this.dept = dept;
+	}
+	void displayDetails(){
+		super.displayDetails();
+		System.out.println("Department of management: "+dept);
+
+	}
+}
+
+public class Employees{
+	public static void main(String[] args){
+		Employee e = new Employee("Hridik", "Developer",80000);
+		Manager m = new Manager("Indrajith", "Quality Analyst", 75000, "Mobile application");
+		e.displayDetails();
+		m.displayDetails();
+	}
+}
