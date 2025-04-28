@@ -1,0 +1,48 @@
+class Vehicle{
+	//Data members
+	String color;
+	int speed;
+	//Constructor
+	Vehicle(String color, int speed){
+		this.color=color;
+		this.speed=speed;
+	}
+	//Method
+	void disp(){
+		System.out.println("Colour= "+color+" Speed= "+speed);
+	}
+}
+//child class car
+class Car extends Vehicle{
+	//Data member
+	int modelno;
+	//Constructor
+	Car(String color,int speed,int modelno){
+		super(color,speed);
+		this.modelno=modelno;
+	}
+	//Method
+	void disp(){
+		System.out.println("Model no= "+this.modelno);
+		super.disp();
+	}
+}
+class Motorcycle extends Vehicle{
+	int modelno;
+	Motorcycle(String color,int speed,int modelno){
+		super(color,speed);
+		this.modelno=modelno;
+	}
+	void disp(){
+		System.out.println("Model no= "+this.modelno);
+		super.disp();
+	}
+}
+public class Vehicles{
+	public static void main(String args[]){
+		Car c=new Car("Red",100,2);
+		Motorcycle m=new Motorcycle("Blue",80,21);
+		c.disp();
+		m.disp();
+	}
+}
