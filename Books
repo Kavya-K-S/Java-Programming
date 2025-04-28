@@ -1,0 +1,19 @@
+class Book{
+	Book(String title,String author){
+		System.out.println("Title= "+title+" Author= "+author);
+	}
+	Book(String title,String author,int price){
+		System.out.println("Title= "+title+" Author= "+author+" Price= "+price);
+	}
+	Book(String title,String author,int price,String publisher){
+		System.out.println("Title= "+title+" Author= "+author+" Price= "+price+" Publisher= "+publisher);
+	}
+}
+class Books{
+	public static void main(String args[]){
+		Book b1=new Book("I am Malala","Malala Yusefsai");
+		Book b2=new Book("God of small things","Arundati roy",599);
+		Book b3=new Book("Half girlfriend","Chetan Bhagat",499,"DC Books");
+	}
+}
+
