@@ -1,0 +1,19 @@
+class Box{
+	int l,b,h;
+	Box(){
+		l=20;
+		b=15;
+		h=5;
+	}
+	void volume(){
+		System.out.println("Volume ="+l*b*h);
+	}
+}
+public class BoxMain{
+	public static void main(String[] args){
+		Box b=new Box();
+		Box c=new Box();
+		b.volume();
+		c.volume();
+	}
+}
