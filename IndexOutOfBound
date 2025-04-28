@@ -1,0 +1,12 @@
+class ArrBound{
+	public static void main(String[] args){
+		int[] arr=new int[6];
+		try{
+			System.out.println(arr[7]);
+		}
+		catch(ArithmeticException e){
+		System.out.println(e);
+	}
+	}
+	
+}
