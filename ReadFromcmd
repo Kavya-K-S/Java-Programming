@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFileFromCM {
+    public static void main(String[] args) {
+        // Ensure that a filename is provided
+        if (args.length < 1) {
+            System.out.println("Usage: java ReadFileFromCMD Sample.txt");
+            return;
+        }
+
+        String fileName = args[0]; // Get the filename from the command line
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line); // Print each line from the file
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
