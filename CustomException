@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class NegativeInputException extends Exception {
+    public NegativeInputException(String message) {
+        super(message);
+    }
+}
+
+public class CustomNegativeException {
+    public static void checkInput(int num) throws NegativeInputException {
+        if (num < 0) {
+            throw new NegativeInputException("Negative numbers are not allowed.");
+        }
+        System.out.println("You entered: " + num);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter an integer: ");
+            int num = scanner.nextInt();
+            checkInput(num);
+        } catch (NegativeInputException e) {
+            System.out.println("Exception: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter an integer.");
+        } finally {
+            scanner.close();
+        }
