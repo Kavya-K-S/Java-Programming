@@ -1,0 +1,10 @@
+class Runthread implements Runnable{
+	public void run(){
+		System.out.println("The thread is running...");
+	}
+	public static void main(String args[]){
+		Runthread t=new Runthread();
+		Thread t1=new Thread(t);
+		t1.start();
+	}
+}
