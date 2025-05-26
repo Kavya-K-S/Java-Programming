@@ -1,0 +1,34 @@
+package srvrskt.java;
+import java.io.*;
+import java.net.*; 
+public class severSkt {
+	public static void main(String args[]) {
+		try {
+			ServerSocket ss=new ServerSocket(8000);
+			Socket s=ss.accept();
+			DataInputStream dis=new DataInputStream(s.getInputStream());
+			s.close();
+			ss.close();
+		}
+	   catch(Exception e) {
+		   System.out.println(e);
+	   }
+		
+	}
+}
+package srvrskt.java;
+import java.io.*;
+import java.net.*;
+public class clskt {
+	public static void main(String[] args) {
+		try {
+			Socket s=new Socket("localhost",8000);
+			DataOutputStream dout=new DataOutputStream(s.getOutputStream());
+			dout.flush();
+			dout.close();
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+}
